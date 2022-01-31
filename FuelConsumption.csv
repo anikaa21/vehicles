@@ -1,4 +1,4 @@
-Model Year,Make,Model,Vehicle Class,Engine_Size,Cylinders,Transmission,Fuel Type,Fuel_Consumption_city ,Fuel_consumption_Hwy,Fuel_consumption_Comb,Fuel Consumption Comb (mpg),CO2_Emissions,Smog 
+Model Year,Make,Model,Vehicle Class,Engine_Size,Cylinders,Transmission,Fuel Type,Fuel_Consumption_city,Fuel_consumption_Hwy,Fuel_consumption_Comb,Fuel Consumption Comb (mpg),CO2_Emissions,Smog 
 2021,Acura,ILX,Compact,2.4,4,AM8,Z,9.9,7,8.6,33,199,3
 2021,Acura,NSX,Two-seater,3.5,6,AM9,Z,11.1,10.8,11,26,256,3
 2021,Acura,RDX SH-AWD,SUV: Small,2,4,AS10,Z,11,8.6,9.9,29,232,6

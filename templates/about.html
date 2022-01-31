@@ -1,18 +1,60 @@
 {% extends 'layouts.html'%}
 {% block content%}
-<h1>What is in Car Emissions?</h1>
-<p>The principal emissions from motor vehicles (by volume) are greenhouse gases, 
-which contribute to climate change. In vehicles, the principal greenhouse gas is 
-carbon dioxide (CO2), but vehicles also produce the greenhouse gases nitrous oxide
- and methane. Not all vehicles have the same impact though. The vehicle's level of 
- CO2 emissions is linked to the amount of fuel consumed and the type of fuel used.
-Visible air pollution from vehicles is composed of nitrogen oxides, sulphur oxides,
- ozone, smoke and other particulates.  Although people with healthy lungs are affected 
- by these chemicals, individuals with lung problems are at a particularly high risk of 
- being harmed by car emissions.Global warming endangers our health, jeopardizes our 
- national security, and threatens other basic human needs. Some impacts—such as record 
- high temperatures, rising seas, and severe flooding and droughts—are already increasingly
-  common.
+<h1>Emissions from Vehicles</h1>
+<br>
+<style>   
+       .wrapingimage  
+       {  
+       float: right;   
+       margin: 30px 12px 3px 4px;   
+      
+       }   
+       .wrapingimage2  
+       {  
+       float: left;   
+       margin: 30px 12px 3px 4px;   
+      
+       }   
+       </style>   
+       <div class="wrapingimage">   
+                
+ <img src="{{url_for('static', filename='car emission.jpg')}}" class="img-fluid" align="center" width="400"/>
+        </div>
+<p>
+       Vehicle emissions affect local and regional air quality. Emissions generated from
+       fuel combustion by internal combustion engines (ICE) include nitrogen oxides (NOx),
+        hydrocarbons (HC), carbon monoxide (CO), and particulate matter.  There are several chemicals released by combustion engines that are harmful to humans
+       <br> 
+       The air quality index (AQI) is an index for reporting air quality on a daily basis. It is a measure of how air pollution affects one's health within a short time period. The purpose of the AQI is to help people know how the local air quality impacts their health. The Environmental Protection Agency (EPA) calculates the AQI for five major air pollutants, for which national air quality standards have been established to safeguard public health.
+       <br>
+       1. Ground-level ozone
+       <br>
+       2. Particle pollution/particulate matter (PM2.5/pm 10)
+       <br>
+       3. Carbon Monoxide
+       <br>
+       4. Sulfur dioxide
+       <br>
+       5. Nitrogen dioxide
+       <br>
+       The higher the AQI value, the greater the level of air pollution and the greater the health concerns.
+        <br> The concept of AQI has been widely used in many developed countries for over the last three decades.
+        <br>
+         AQI quickly disseminates air quality information in real-time.
+       <br>
+</p>    
+<br><br>
+<div class="wrapingimage2">   
+                
+       <img src="{{url_for('static', filename='catalytic.png')}}" class="img-fluid" align="center" width="400"/>
+              </div>  
+<p> Catalytic converters 
+       are used to reduce the emissions from an internal combustion engine but carbon dioxide 
+       (CO2), which is a greenhouse gas that is the main combustion product of carbon-based fuels.
+        Vehicle CO2 emissions should be regulated around the world and should be reduced by
+         improving the fuel efficiency of the vehicles. To control CO2 emission of vehicles 
+         Fuel-efficient vehicles should be developed which use less gas to travel the same 
+         distance as their less efficient counterparts. 
 
 Our personal vehicles are a major cause of global warming.</p>
 <p>For many years now, scientists and others have been raising concerns about 
@@ -23,10 +65,11 @@ Our personal vehicles are a major cause of global warming.</p>
       are another major source of carbon. They also increase pollution levels, which can
        lead to all manner of health problems. Understanding automobile carbon emission and
        what car owners can do to reduce it will go a long way toward addressing the aforementioned issues.
-</p><p>Carbon emissions include a number of different chemicals and particulates
+      Carbon emissions include a number of different chemicals and particulates
      that are produced when fuel is burned in an engine. Some of the major substances found 
      in a car’s exhaust include carbon dioxide, ozone, and carbon monoxide. Other chemicals
-      often found in exhaust gasses include benzene and nitrogen oxides. Many of these chemicals serve an important purpose in different parts of the atmosphere, but they can have bad consequences when human beings inhale them directly.</p>
- <img src="{{url_for('static', filename='car.PNG')}}" class="img-fluid" align="center" width="500"/>
-
+      often found in exhaust gasses include benzene and nitrogen oxides. Many of these chemicals
+       serve an important purpose in different parts of the atmosphere, but they can have bad
+        consequences when human beings inhale them directly.</p>
+        
 {% endblock content %}  

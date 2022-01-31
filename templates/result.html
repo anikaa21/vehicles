@@ -1,0 +1,47 @@
+{% extends 'layouts.html'%}
+{% block content%}
+<body>
+    <style>   
+        .wrapingimage  
+        {  
+        float: right;   
+       
+        }   
+        .result{
+            margin: 0;
+            padding: 0;
+            font-family: "arial"
+            position: absolute;
+            margin-top: 3;
+        }
+        </style>   
+        <div class="wrapingimage">   
+      <br><br><br> <br>
+    <img src="{{url_for('static', filename='main.jpg')}}" class="img-fluid" align="center" width="500"/>
+    <br><a href="/co2" target="_blank" >Back to Predict CO2 Emission</a> </div>
+    
+<div class="result">
+    <h2>Amount of CO2 Emission for vehicle for data entered:</h2>
+	  <br>   
+      <h4> CO2 Emission of this Vehicles is :</h4>
+     <p style="font-size:30px">{{ result }}</p>
+     <br>        <h4> Amount of CO2 Emission :</h4>
+     <p style="font-size:30px">{{ inf }}</p>
+     <br>
+<div>
+    {% if inf == "high" %}
+    <h3> CO2 Emission </h3>  <h4>Amount of CO2 Emission is high and should be controlled, its having harmful effects on environment</h4>
+     {% endif %}
+     {% if inf == "moderate" %}
+     <h3> CO2 Emission </h3>  <h4>Amount of CO2 Emission is moderate and should be controlled for producing lesser harmful effects on environment</h4>
+     {% endif %}
+     {% if inf == "low" %}
+     <h3> CO2 Emission </h3>  <h4>Amount of CO2 Emission is low and good for environment and little harmful impact on environment</h4>
+     {% endif %}
+</div>
+  
+</h4>
+</div>
+
+<body>
+{% endblock content %}  
