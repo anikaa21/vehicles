@@ -23,8 +23,7 @@ test = cdf[~msk]
 matplotlib.use('Agg')
 
 model=pickle.load(open('ensemble_model.pkl','rb'))
-model2= 'xgboost_random_model.pkl'
-regressor = pickle.load(open(model2, 'rb'))
+model2=pickle.load(open('xgboost_random_model.pkl','rb'))
 
 app = flask.Flask(__name__, template_folder='templates')
 
@@ -54,7 +53,7 @@ def predict1():
         
         data = np.array([[avg_temp,max_temp, min_temp, at_pres, avg_hum, avg_vis, avg_speed, max_sustained]])
          
-        my_prediction = regressor.predict(data)
+        my_prediction = model2.predict(data)
         my_prediction =np.round(my_prediction,2) 
         if (my_prediction>=0 and my_prediction<=30):
             inference="Good"
