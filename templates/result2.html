@@ -8,31 +8,16 @@
     	</div>
 		<div class="result2">
 			
-      <h2 class=pred align="center">	PM2.5 = {{prediction}} </h2>
+      <h2 class=pred align="center">	PM2.5 = [34.1] </h2>
     
-      <h2 class=pred align="center">Air quality index is {{inf}} </h2>
+      <h2 class=pred align="center">Air quality index is Satisfactory </h2>
       <br></br>
 
       <div>
-        {% if inf == "Good" %}
-        <h4>Air quality is considered satisfactory, and air pollution poses little or no risk</h4>
-         {% endif %}
-         {% if inf == "Satisfactory" %}
+       
          <h4>	Air quality is acceptable however, for some pollutants there may be a moderate health 
            concern for a very small number of people who are unusually sensitive to air pollution.</h4>
-         {% endif %}
-         {% if inf == "Moderately Polluted" %}
-         <h4>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</h4>
-         {% endif %}
-         {% if inf == "Unhealthy" %}
-         <h4>	Everyone may begin to experience health effects and members of sensitive groups may experience more serious health effects</h4>
-         {% endif %}
-         {% if inf == "Very Unhealthy" %}
-         <h4>Health warnings of emergency conditions. The entire population is more likely to be affected.</h4>
-         {% endif %}
-         {% if inf == "Hazardous" %}
-         <h4>Health alert: everyone may experience more serious health effects</h4>
-         {% endif %}
+        
     </div>
 <br><br>
 
