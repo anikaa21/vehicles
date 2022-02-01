@@ -23,7 +23,8 @@ test = cdf[~msk]
 matplotlib.use('Agg')
 
 model=pickle.load(open('ensemble_model.pkl','rb'))
-model2=pickle.load(open('xgboost_random_model.pkl','rb'))
+Model = 'xgboost_random_model.pkl'
+model2 = pickle.load(open(Model, 'rb'))
 
 app = flask.Flask(__name__, template_folder='templates')
 
