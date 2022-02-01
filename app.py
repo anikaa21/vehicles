@@ -23,6 +23,7 @@ test = cdf[~msk]
 matplotlib.use('Agg')
 
 model=pickle.load(open('ensemble_model.pkl','rb'))
+model2 = pickle.load(open('xgboost_random_model.pkl', 'rb'))
 app = flask.Flask(__name__, template_folder='templates')
 
 @app.route('/about', methods=['GET'])
@@ -48,8 +49,24 @@ def predict1():
         avg_vis = float(request.form['Average_visibility'])
         avg_speed = float(request.form['Average_windspeed'])
         max_sustained = float(request.form['Max sustained wind speed'])
+        data = np.array([[avg_temp,max_temp, min_temp, at_pres, avg_hum, avg_vis, avg_speed, max_sustained]])
+         
+        my_prediction = model2.predict(data)
+        my_prediction =np.round(my_prediction,2) 
+        if (my_prediction>=0 and my_prediction<=30):
+            inference="Good"
+        elif(my_prediction>=31 and my_prediction<=60):
+            inference="Satisfactory"
+        elif(my_prediction>=61 and my_prediction<=100):
+            inference="Moderately Polluted"
+        elif(my_prediction>=101 and my_prediction<=170.4):
+            inference="Unhealthy"  
+        elif(my_prediction>=170.5 and my_prediction<=220.4):
+            inference="Very Unhealthy"
+        elif(my_prediction>=220.5):
+          inference="Hazardous"
         
-        return render_template('result2.html')
+        return render_template('result2.html', prediction=my_prediction,inf=inference)
 
 @app.route("/result", methods=['POST'])
 def predict():
