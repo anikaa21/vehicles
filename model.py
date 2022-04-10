@@ -27,6 +27,6 @@ ensemble_model = VotingRegressor([
 
 ensemble_model.fit(x, y)
 
-pickle.dump(ensemble_model,open('ensemble_modelCO2.pkl','wb'))
-model=pickle.load(open('ensemble_modelCO2.pkl','rb'))
+pickle.dump(ensemble_model,open('ensemble_model.pkl','wb'))
+model=pickle.load(open('ensemble_model.pkl','rb'))
 
