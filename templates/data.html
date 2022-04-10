@@ -1,0 +1,12 @@
+{% extends 'layouts.html'%}
+{% block content%}
+<h1 >Data visualization of vehicle CO2 emission</h1> 
+<br>
+
+                
+ <img src="{{url_for('static', filename='data1.png')}}" class="img-fluid" align="center" width="1500"/>
+ <img src="{{url_for('static', filename='data2.png')}}" class="img-fluid" align="center" width="1500"/>
+ <img src="{{url_for('static', filename='data.png')}}" class="img-fluid" align="center" width="1500"/>
+  
+
+{% endblock content %}  
