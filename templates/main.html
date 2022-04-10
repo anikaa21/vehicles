@@ -1,0 +1,40 @@
+{% extends 'layouts.html' %}
+{% block content%}
+<title>Vehicle Emissions</title>
+<section>
+
+  
+<style>
+  
+
+  body{
+    background-image: url('{{url_for('static', filename='index.jfif')}}');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  
+
+  }
+  
+  div.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.8;
+  }
+  
+  div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+  }
+</style> 
+
+<div class="background">
+  <div class="transbox">
+  <br>
+  <h1 align="center">Predicting Vehicles Emissions </h1>
+  <h2 align="center">Know the concentration of CO2 emission from any vehicle <br>and Air quality index of any area.</h2>
+</div>
+</div>
+{% endblock content %}   

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>{{title}}</title>
+</head>
+<style>
+form {
+    margin: auto;
+    width: 95%;
+}
+result {
+    margin: auto;
+    width: 95%;
+    border: 2px solid #ccc;
+    color: black;
+}
+
+  .mode {
+      float:right;
+  }
+  .change {
+      cursor: pointer;
+      border: 1px solid #555;
+      border-radius: 10%;
+      width: 2px;
+      text-align: center;
+      padding: 5px;
+      margin-left: 8px;
+     
+  }
+  .dark{
+      background-color: #222;
+      color: #e6e6e6;
+  }
+</style>
+  <body>
+
+    <div class="mode">
+      Dark mode:            
+      <span class="change">OFF</span>
+    </div>  
+ 
+    <div class="p-3 mb-2 bg-info text-white"></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="/">Vehicle Emissions</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link " href="about">About</a>
+      <a class="nav-item nav-link" href="co2">Predict CO2 Emission</a>
+      <a class="nav-item nav-link" href="data">Data visualization for Vehicle CO2 emission</a>
+      <a class="nav-item nav-link" href="aqi">Predict AQI</a>
+      <a class="nav-item nav-link" href="performace">Performance Metrics for our ML Models</a>
+      <a class="nav-item nav-link" href="carbon">Ways to Reduce Vehicle Emissions</a>
+      <a class="nav-item nav-link" href="plot1">CO2 Emission Rate</a>
+      <a class="nav-item nav-link" href="plot2">Change in Global Surface Temperature</a>  
+    </div>
+  </div>
+</nav>
+<br>
+
+ <div class="container">
+  {% block content %}
+
+{% endblock content %}  
+      
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</div>
+
+</div>
+<script>
+$( ".change" ).on("click", function() {
+    if( $( "body" ).hasClass( "dark" )) {
+        $( "body" ).removeClass( "dark" );
+        $( ".change" ).text( "OFF" );
+    } else {
+        $( "body" ).addClass( "dark" );
+        $( ".change" ).text( "ON" );
+    }
+});
+</script>
+  </body>
+  </html>
+
+
+

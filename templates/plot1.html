@@ -1,0 +1,42 @@
+{% extends 'layouts.html'%}
+{% block content%}
+<!doctype html>
+<title>CO2 Emission rates over the years</title>
+<section>
+  <h2>CO2 Emission rates over the years</h2>
+    <style>   
+     
+    .wrapingimage  
+    {  
+    float: left;   
+    margin: 30px 12px 3px 4px;   
+    }   
+    </style>   
+    <div class="wrapingimage">   
+             
+      <img src="data:image/png;base64, {{ plot_url }}" class="img-responsive"  align="center"  width="400">
+     </div>
+</section>
+<br>
+       <h3>This graph illustrates the change in global CO2 emission rates over years</h3>
+       <br>
+       <p>
+        Global CO2 emissions declined by 5.8% in 2020, or almost 2 Gt CO2 – the largest ever decline
+         and almost five times greater than the 2009 decline that followed the global financial crisis.
+          CO2 emissions fell further than energy demand in 2020 owing to the pandemic hitting demand for
+           oil and coal harder than other energy sources while renewables increased. 
+
+      <br>
+      Despite the decline
+      in 2020, global energy-related CO2 emissions remained at 31.5 Gt, which contributed to CO2 
+      reaching its highest ever average annual concentration in the atmosphere of 412.5 parts per 
+      million in 2020 – around 50% higher than when the industrial revolution began.
+
+        <br><br>
+       
+      In 2021 global energy-related CO2 emissions are projected to rebound and grow by 4.8% as demand for
+      coal, oil and gas rebounds with the economy. The increase of over 1 500 Mt CO2 would be the largest
+       single increase since the carbon-intensive economic recovery from the global financial crisis more 
+       than a decade ago, it leaves global emissions in 2021 around 400 Mt CO2, or 1.2%, below the 2019 peak.
+      </p>
+{% endblock content %}  

@@ -1,0 +1,80 @@
+{% extends 'layouts.html'%}
+{% block content%}
+    <body>
+      <div class="container"><br></br>
+            <h1 class='container-heading' align="center"><span class="heading_font">Air Quality Index</span></h1>
+      <div class='description'><br></br>
+    		</div>
+    	</div>
+		<div class="results">
+			
+      <h2 class=pred align="center">	PM2.5 = {{prediction}} </h2>
+    
+      <h2 class=pred align="center">Air quality index is {{inf}} </h2>
+      <br></br>
+
+      <div>
+        {% if inf == "Good" %}
+        <h4>Air quality is considered satisfactory, and air pollution poses little or no risk</h4>
+         {% endif %}
+         {% if inf == "Satisfactory" %}
+         <h4>	Air quality is acceptable however, for some pollutants there may be a moderate health 
+           concern for a very small number of people who are unusually sensitive to air pollution.</h4>
+         {% endif %}
+         {% if inf == "Moderately Polluted" %}
+         <h4>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</h4>
+         {% endif %}
+         {% if inf == "Unhealthy" %}
+         <h4>	Everyone may begin to experience health effects and members of sensitive groups may experience more serious health effects</h4>
+         {% endif %}
+         {% if inf == "Very Unhealthy" %}
+         <h4>Health warnings of emergency conditions. The entire population is more likely to be affected.</h4>
+         {% endif %}
+         {% if inf == "Hazardous" %}
+         <h4>Health alert: everyone may experience more serious health effects</h4>
+         {% endif %}
+    </div>
+<br><br>
+
+<table style="width:100%" align="center">
+  
+  <tr>
+    <th>PM2.5</th>
+    <th>AIR QUALITY INDEX</th>
+    <th>AQI CATEGORY</th>
+  </tr> 
+  <tr>
+    <td>0.0 – 30</td>
+    <td>0 - 50</td>
+    <td> Good </td> 
+  </tr><tr>
+    <td>31 - 60</td>
+    <td>50 - 100</td>
+    <td> Satisfactory </td> 
+  </tr><tr>
+    <td>61 – 100</td>
+    <td>101 - 160</td>
+    <td> Moderately Polluted </td> 
+  </tr> 
+  <tr>
+    <td>101 – 170.4</td>
+    <td>161-210</td>
+    <td> Unhealthy </td>
+  </tr>
+  <tr>
+    <td>170.5 – 220.4</td>
+    <td>210-300</td>
+    <td> Very Unhealthy </td> 
+  </tr>
+   <tr>
+    <td>Above 220.5</td>
+    <td>Above300</td>
+    <td> Hazardous </td> 
+  </tr>
+      </table>
+ <br></br> <br></br> 
+ <br><a href="/aqi" target="_blank" >Back to predict AQI</a> 
+     
+    </body>
+</html>
+{% endblock content %}  

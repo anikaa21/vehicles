@@ -1,0 +1,43 @@
+{% extends 'layouts.html'%}
+{% block content%}
+<!doctype html>
+<title>Change in Global Surface Temperature</title>
+<section>
+  <h2>Change in Global Surface Temperature</h2>
+  <style>   
+    .wrapingimage  
+    {  
+    float: left;   
+    margin: 30px 12px 3px 4px;   
+   
+    }   
+    </style>   
+    <div class="wrapingimage">   
+             
+      <img src="data:image/png;base64, {{ plot_url }}"class="img-responsive"  align="center" width="400">
+     </div>
+
+</section>
+       <br>
+       <h3>This graph illustrates the change in global surface temperature</h3>
+       <br>
+<p>The world is getting warmer. Thermometer readings around the world have been rising since the 
+  Industrial Revolution, and the causes are a blend of human activity and some natural variability—with
+   the preponderance of evidence saying humans are mostly responsible.
+<br>
+  According to an ongoing temperature analysis conducted by scientists at NASA’s Goddard Institute for 
+  Space Studies (GISS), the average global temperature on Earth has increased by a little more than 1° 
+  Celsius (2° Fahrenheit) since 1880. Two-thirds of the warming has occurred since 1975, at a rate of 
+  roughly 0.15-0.20°C per decade.
+  <br>
+  The global temperature record represents an average over the entire surface of the planet. The temperatures 
+  we experience locally and in short periods can fluctuate significantly due to predictable cyclical events
+   (night and day, summer and winter) and hard-to-predict wind and precipitation patterns. But the global 
+   temperature mainly depends on how much energy the planet receives from the Sun and how much it radiates
+    back into space—quantities that change very little. The amount of energy radiated by the Earth depends
+     significantly on the chemical composition of the atmosphere, particularly the amount of heat-trapping
+      greenhouse gases.
+</p>
+</section>
+
+{% endblock content %}  

@@ -1,0 +1,30 @@
+{% extends 'layouts.html'%}
+{% block content%}
+
+    <head>
+     
+        <title>AQI Predictor</title>
+    </head>
+    <body>
+     <br>
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Air Quality Index Predictor</span></h2>
+            
+    	</div>
+        <div class="form-group">
+
+    		<form action="/resultaqi" method="POST"> 
+                <input class="form-control" type="text" name="Average_temp" placeholder="Average Temperature (°c) eg. 30 "><br>
+                <input class="form-control" type="text" name="Max_temp" placeholder="Maximum Temperature (°c) eg. 35"><br>
+                <input class="form-control" type="text" name="Min_temp" placeholder="Minimum Temperature (°c) eg. 27"><br>
+                <input class="form-control" type="text" name="Atmospheric_pressure" placeholder="Atmospheric pressure at sea level (hPa) eg. 1000"><br>
+                <input class="form-control" type="text" name="Average_humidity" placeholder="Average relative humidity (%) eg. 50"><br>
+                <input class="form-control" type="text" name="Average_visibility" placeholder="Average visibility (Km)eg. 3.0"><br>
+                <input class="form-control" type="text" name="Average_windspeed" placeholder="Average wind speed (Km/h) eg. 12.0"><br>
+                <input class="form-control" type="text" name="Max sustained wind speed" placeholder="Maximum sustained wind speed (Km/h) eg. 15.0"><br>
+        		<input type="submit" class="btn btn-primary" value="Predict">
+        	</form>
+    	</div>  
+    </body>
+</html>
+{% endblock content %}  
